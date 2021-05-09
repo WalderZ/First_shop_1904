@@ -8,6 +8,7 @@
     --dark-grey: #5D5D5D;
     --white: #FBFBFB;
     --dark: #222224;
+    --form-grey: #E1E1E1;
 }
 
 body {
@@ -16,11 +17,13 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
+
 }
 
 .container {
     width: 1140px;
     margin: 0 auto;
+    position: relative;
 }
 
 .visually-hidden {
@@ -35,8 +38,11 @@ body {
 }
 
 .header {
+
     background-color: var(--dark-blue);
 }
+
+
 
 .header__wrapper {
     display: flex;
@@ -45,15 +51,26 @@ body {
     min-height: 75px;
 }
 
-.header__navigation {
-    display: none;
-}
-
 .header__button {
     background-color: transparent;
     border: none;
     margin: 0 34px;
 }
+
+.header__button:active .header__button-menu {
+    opacity: 0.5;
+}
+
+.header__navigation {
+    display: block;
+    position: absolute;
+}
+
+.header__button:hover+.header__navigation {
+    display: block;
+}
+
+
 
 .header__logo {
     margin: 0 10px;
@@ -61,6 +78,22 @@ body {
 
 .header__person-link {
     margin: 0 34px;
+}
+
+.header__person-link-cart {
+    position: relative;
+}
+
+.header__person-link-cart::after {
+    content: '';
+    color: var(--white);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 20px;
+    right: -10px;
+    background-image: url(../img/cart_number.png);
+    background-size: 20px 20px;
 }
 
 .brand {
@@ -72,8 +105,32 @@ body {
 }
 
 .brand__container {
+    position: relative;
+}
+
+.brand__overlay {
     display: flex;
 
+}
+
+.brand__overlay::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    min-height: 764px;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* если просто поставить dispaly:block то всё работает, что делаю не так??? */
+.brand__overlay::before {
+    display: none;
+}
+
+/* не работает(((((( */
+.header__button:active+.brand__overlay::before {
+    display: block;
 }
 
 .brand__title {
@@ -82,9 +139,18 @@ body {
     font-weight: 900;
     line-height: 58px;
     text-transform: uppercase;
+    position: relative;
 }
 
-.brand__title::before {}
+.brand__title::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 95px;
+    top: 0px;
+    left: -28px;
+    background: var(--dark-pink);
+}
 
 .brand__title-wrapper {
     flex-grow: 1;
@@ -99,9 +165,9 @@ body {
 
 .brand__subtitle {
     display: block;
-    font-size: 37px;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 44px;
+    line-height: 38px;
 }
 
 .brand__subtitle-red {
@@ -115,7 +181,7 @@ body {
 }
 
 .category__item {
-    color: white;
+    color: var(--white);
     width: 360px;
     min-height: 260px;
     background-color: var(--brown);
@@ -194,6 +260,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
+    position: relative;
 }
 
 .products__item-title {
@@ -222,6 +289,56 @@ body {
     height: 420px;
 }
 
+.products__item-overlay::before {
+    position: absolute;
+    content: '';
+    width: 360px;
+    height: 420px;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.products__item-overlay::before {
+    display: none;
+}
+
+.products__item-add-to-cart {
+    background-color: transparent;
+    border: 1px solid;
+    position: absolute;
+    width: 138px;
+    height: 43px;
+    padding: 0 15px 0 50px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.products__item-add-to-cart {
+    display: none;
+}
+
+.products__item-add-to-cart::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 24px;
+    top: 10px;
+    left: 13px;
+    background-image: url(../img/product_cart.svg);
+}
+
+.products__item:hover .products__item-overlay::before {
+    display: block;
+}
+
+.products__item:hover .products__item-add-to-cart {
+    display: block;
+}
+
 .products__main-image {
     margin: 0 0 0 108px;
 }
@@ -244,11 +361,23 @@ body {
     text-decoration: none;
     color: var(--dark-pink);
     margin: 63px 0 109px;
+    position: relative;
+}
+
+.products__link-catalog::before {
+    content: '';
+    position: absolute;
+    width: 211px;
+    height: 47px;
+    top: -14px;
+    left: -38px;
+    background: transparent;
+    border: 1px solid;
+    border-color: var(--dark-pink);
 }
 
 .benefits {
     min-width: 1600;
-    min-height: 341px;
     padding: 104px 0 104px 0;
     background-color: var(--dark);
 }
@@ -356,6 +485,47 @@ body {
     text-transform: uppercase;
 }
 
+.footer__subscription-form-email {
+    display: flex;
+    margin: 32px 0 0 0;
+}
+
+.footer__subscription-form-input {
+    border: 0px;
+    -webkit-border-top-left-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius-topleft: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 245px;
+    height: 52px;
+    padding-left: 20px;
+    background-color: var(--form-grey);
+}
+
+.footer__subscription-form-input::placeholder {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--dark);
+}
+
+.footer__subscription-form-button {
+    border: 0px;
+    -webkit-border-top-right-radius: 50px;
+    -webkit-border-bottom-right-radius: 50px;
+    -moz-border-radius-topright: 50px;
+    -moz-border-radius-bottomright: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: var(--dark-pink);
+    color: var(--white);
+    width: 100px;
+    height: 54px;
+}
+
 .footer__social-and-rights {
     display: flex;
     min-width: 1600px;
@@ -387,4 +557,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-right: 8px;
+}
+
+.footer__social-box--pink {
+    background-color: var(--dark-pink)
 }

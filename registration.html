@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Registration</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__controls">
+                    <img class="header__logo" src="./img/logo.svg" alt="logo" width="44" height="38">
+                    <img class="header__loupe" src="./img/loupe.svg" alt="loupe" width="26" height="27">
+                </div>
+                <div class="header__controls">
+                    <button class="header__button">
+                        <img src="./img/burger.svg" alt="burger" width="32" height="23">
+                    </button>
+                    <!-- прописать ссылку на страницу регистрации -->
+                    <a class="header__person-link" href="#"><img src="./img/avatar.svg" alt="avatar" width="29"
+                            height="29"></a>
+                    <!-- прописать ссылку на страницу корзины -->
+                    <a class="header__person-link header__person-link-cart" href="#"><img src="./img/cart.svg"
+                            alt="cart" width="32" height="29"></a>
+                </div>
+            </div>
+        </div>
+        <nav class="header__navigation">
+            <h2 class="header__menu">menu</h2>
+            <!-- прописать все соответствующие ссылки при создании)-->
+            <ul>
+                <li class="header__link">
+                    <a class="header__category-link" href="#">men</a>
+                    <ul>
+                        <li><a class="header__subcategory" href="#">accessories</a></li>
+                        <li><a class="header__subcategory" href="#"></a>bags</li>
+                        <li><a class="header__subcategory" href="#"></a>denim</li>
+                        <li><a class="header__subcategory" href="#"></a>t-shirts</li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="header__category-link" href="#">women</a>
+                    <ul>
+                        <li><a class="header__subcategory" href="#">accessories</a></li>
+                        <li><a class="header__subcategory" href="#"></a>jackets & coats</li>
+                        <li><a class="header__subcategory" href="#"></a>polos</li>
+                        <li><a class="header__subcategory" href="#"></a>t-shirts</li>
+                        <li><a class="header__subcategory" href="#"></a>shirts</li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="header__category-link" href="#">kids</a>
+                    <ul>
+                        <li><a class="header__subcategory" href="#">accessories</a></li>
+                        <li><a class="header__subcategory" href="#"></a>jackets & coats</li>
+                        <li><a class="header__subcategory" href="#"></a>polos</li>
+                        <li><a class="header__subcategory" href="#"></a>t-shirts</li>
+                        <li><a class="header__subcategory" href="#"></a>shirts</li>
+                        <li><a class="header__subcategory" href="#"></a>bags</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+    </header>
+    <main>
+        <section class="registration">
+            <div class="bregistration__container">
+
+            </div>
+        </section>
+        <section class="registration-form container">
+            <form action="">
+                <fieldset class="registration-form__user-data">
+                    <legend> Your Name </legend>
+                    <div>
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                        <input type="radio" id="gender1" name="gender">
+                        <label for="gender1">Male</label>
+                        <input type="radio" id="gender2" name="gender">
+                        <label for="gender2">Female</label>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+    <footer class="footer container">
+
+        <section class="footer__subscription">
+            <div class="footer__subscription-information">
+                <img class="footer__subscription-image" src="./img/round_w.png" alt="womem" width="96" height="96">
+                <p class="footer__subscription-text">
+                    “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
+                    purus condimentum“
+                </p>
+            </div>
+            <div class="footer__subscription-form">
+                <h2 class="footer__subscription-form-title"> subscribe</h2>
+                <h3 class="footer__subscription-form-subtitle"> for our newletter and promotion</h3>
+                <!-- чтобы не выдавало ошибку перевел на страницу регистрации -->
+                <form class="footer__subscription-form-email" action="registration.html">
+                    <input class="footer__subscription-form-input" type="email" placeholder="Enter Your Email">
+                    <button class="footer__subscription-form-button" type="submit">Subscribe</button>
+                </form>
+            </div>
+
+        </section>
+        <section class="footer__social-and-rights">
+            <div class="footer__rights">
+                <p>&copy; 2021 Brand All Rights Reserved.</p>
+            </div>
+            <div class="footer__social">
+                <div class="footer__social-box">
+                    <a href="#"><img src="./img/facebook_vector.png" alt="fb_icon"></a>
+                </div>
+                <div class="footer__social-box footer__social-box--pink">
+                    <a href="#"><img src="./img/insta_vector_white.png" alt="instagram_icon"></a>
+                </div>
+                <div class="footer__social-box">
+                    <a href="#"><img src="./img/pin_vector.png" alt="pinterest_icon"></a>
+                </div>
+                <div class="footer__social-box">
+                    <a href="#"><img src="./img/twit_vector.png" alt="twitter_icon"></a>
+                </div>
+        </section>
+    </footer>
+</body>
+
+</html>
