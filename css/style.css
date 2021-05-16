@@ -5,6 +5,7 @@
     --brown: #2c1f1f;
     --light-grey: #F8F8F8;
     --grey: #9F9F9F;
+    --grey-link: #6F6E6E;
     --dark-grey: #5D5D5D;
     --white: #FBFBFB;
     --dark: #222224;
@@ -12,6 +13,7 @@
 }
 
 body {
+    width: 1600px;
     font-family: Lato;
     font-size: 13px;
     font-style: normal;
@@ -23,7 +25,8 @@ body {
 .container {
     width: 1140px;
     margin: 0 auto;
-    position: relative;
+
+
 }
 
 .visually-hidden {
@@ -38,11 +41,9 @@ body {
 }
 
 .header {
-
     background-color: var(--dark-blue);
+    width: 1600px;
 }
-
-
 
 .header__wrapper {
     display: flex;
@@ -55,22 +56,94 @@ body {
     background-color: transparent;
     border: none;
     margin: 0 34px;
+    position: relative;
 }
 
-.header__button:active .header__button-menu {
+.header__button:hover .header__button-menu {
     opacity: 0.5;
 }
 
 .header__navigation {
-    display: block;
+    display: none;
     position: absolute;
+    width: 232px;
+    top: 8.9%;
+    left: 85%;
+    z-index: 10;
+    background: var(--white);
+    /*  position: absolute;
+    
+    height: auto;
+    
+    top: 75px;
+    right: 0px; */
+    padding: 37px 0 157px 33px;
+
 }
+
+.header__navigation::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/close_button.png);
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    top: 16px;
+    right: 16px;
+    background-size: 12px 12px;
+
+}
+
+.header__subcategory {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16, 8px;
+    margin: 0 0 11px 21px;
+}
+
+.header__category-link--transform-pink {
+    text-decoration: none;
+    color: var(--dark-pink);
+
+}
+
+.header__subcategory--transform-grey {
+    text-decoration: none;
+    color: var(--grey-link);
+}
+
+.header__subcategory--transform-grey:hover {
+    color: black;
+}
+
 
 .header__button:hover+.header__navigation {
     display: block;
 }
 
+.header__navigation:hover {
+    display: block;
+}
 
+.header__menu {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    margin: 0 0 24px 1px;
+    text-transform: uppercase;
+}
+
+.header__category-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    margin: 0 0 12px 0;
+}
 
 .header__logo {
     margin: 0 10px;
@@ -98,18 +171,20 @@ body {
 
 .brand {
     display: flex;
-    margin: 0 0 63px;
+
     background-color: var(--pink);
     width: 100%;
-    justify-content: center;
+
 }
 
 .brand__container {
     position: relative;
+    justify-content: space-between;
 }
 
 .brand__overlay {
     display: flex;
+
 
 }
 
@@ -123,12 +198,12 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* если просто поставить dispaly:block то всё работает, что делаю не так??? */
+
 .brand__overlay::before {
     display: none;
 }
 
-/* не работает(((((( */
+
 .header__button:active+.brand__overlay::before {
     display: block;
 }
@@ -561,4 +636,33 @@ body {
 
 .footer__social-box--pink {
     background-color: var(--dark-pink)
+}
+
+.page-title {
+    display: flex;
+    background-color: var(--pink);
+    width: 1370px;
+    padding: 59px 0 60px 230px;
+}
+
+.page-title__registration {
+    text-transform: uppercase;
+    color: var(--dark-pink);
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.registration {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0 96px 0;
+}
+
+.registration__form-user-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

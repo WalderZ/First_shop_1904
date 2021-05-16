@@ -21,9 +21,66 @@
                     <img class="header__loupe" src="./img/loupe.svg" alt="loupe" width="26" height="27">
                 </div>
                 <div class="header__controls">
-                    <button class="header__button">
-                        <img src="./img/burger.svg" alt="burger" width="32" height="23">
+                    <button class="header__button" type="button">
+                        <img class="header__button-menu" src="./img/burger.svg" alt="burger" width="32" height="23">
                     </button>
+                    <nav class="header__navigation">
+                        <h2 class="header__menu">menu</h2>
+                        <!-- прописать все соответствующие ссылки при создании)-->
+                        <ul>
+                            <li class="header__link">
+                                <div class="header__category-link">
+                                    <a class="header__category-link--transform-pink" href="#">man</a>
+                                </div>
+                                <ul>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">accessories</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">bags</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">denim</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">t-shirts</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="header__category-link">
+                                    <a class="header__category-link--transform-pink" href="#">woman</a>
+                                </div>
+                                <ul>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">accessories</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">jackets & coats</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">polos</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">t-shirts</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">shirts</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="header__category-link">
+                                    <a class="header__category-link--transform-pink" href="#">kids</a>
+                                </div>
+                                <ul>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">accessories</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">jackets & coats</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">polos</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">t-shirts</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">shirts</a></li>
+                                    <li class="header__subcategory"><a class="header__subcategory--transform-grey"
+                                            href="#">bags</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                     <!-- прописать ссылку на страницу регистрации -->
                     <a class="header__person-link" href="#"><img src="./img/avatar.svg" alt="avatar" width="29"
                             height="29"></a>
@@ -33,67 +90,52 @@
                 </div>
             </div>
         </div>
-        <nav class="header__navigation">
-            <h2 class="header__menu">menu</h2>
-            <!-- прописать все соответствующие ссылки при создании)-->
-            <ul>
-                <li class="header__link">
-                    <a class="header__category-link" href="#">men</a>
-                    <ul>
-                        <li><a class="header__subcategory" href="#">accessories</a></li>
-                        <li><a class="header__subcategory" href="#"></a>bags</li>
-                        <li><a class="header__subcategory" href="#"></a>denim</li>
-                        <li><a class="header__subcategory" href="#"></a>t-shirts</li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="header__category-link" href="#">women</a>
-                    <ul>
-                        <li><a class="header__subcategory" href="#">accessories</a></li>
-                        <li><a class="header__subcategory" href="#"></a>jackets & coats</li>
-                        <li><a class="header__subcategory" href="#"></a>polos</li>
-                        <li><a class="header__subcategory" href="#"></a>t-shirts</li>
-                        <li><a class="header__subcategory" href="#"></a>shirts</li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="header__category-link" href="#">kids</a>
-                    <ul>
-                        <li><a class="header__subcategory" href="#">accessories</a></li>
-                        <li><a class="header__subcategory" href="#"></a>jackets & coats</li>
-                        <li><a class="header__subcategory" href="#"></a>polos</li>
-                        <li><a class="header__subcategory" href="#"></a>t-shirts</li>
-                        <li><a class="header__subcategory" href="#"></a>shirts</li>
-                        <li><a class="header__subcategory" href="#"></a>bags</li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-
     </header>
     <main>
-        <section class="registration">
-            <div class="bregistration__container">
-
-            </div>
+        <section class="page-title">
+            <h1 class="page-title__registration">registration</h1>
         </section>
-        <section class="registration-form container">
-            <form action="">
-                <fieldset class="registration-form__user-data">
-                    <legend> Your Name </legend>
-                    <div>
-                        <input type="text" placeholder="First Name">
-                        <input type="text" placeholder="Last Name">
-                        <input type="radio" id="gender1" name="gender">
-                        <label for="gender1">Male</label>
-                        <input type="radio" id="gender2" name="gender">
-                        <label for="gender2">Female</label>
-                    </div>
-                </fieldset>
-            </form>
+        <section class="registration container">
+            <section>
+                <form class="registration__form" action="#">
+                    <fieldset class="registration__form-user-data">
+                        <legend> Your Name </legend>
+                        <div>
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                            <input type="radio" id="gender1" name="gender">
+                            <label for="gender1">Male</label>
+                            <input type="radio" id="gender2" name="gender">
+                            <label for="gender2">Female</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="registration__form-login-password">
+                        <legend> Login details </legend>
+                        <div>
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <p>Please use 8 or more characters, with at least 1 number and a mixture of uppercase and
+                                lowercase letters</p>
+                        </div>
+                    </fieldset>
+                    <button type="submit"> join now </button>
+                </form>
+            </section>
+            <section>
+                <div class="registration__text">
+                    <h2>loyalty has its perks</h2>
+                    <p>get in on the loyalty program where you can earn points and unlock serious perks. starting
+                        with
+                        these as soon as you join:</p>
+                    <ul>
+                        <li>15% off welcome offer</li>
+                        <li>free shipping, returns and exchanges on all orders</li>
+                        <li>$10 off a purchase on your birthday</li>
+                        <li>early access to products</li>
+                        <li>exclusive offers & rewards</li>
+                    </ul>
+            </section>
         </section>
-
     </main>
     <footer class="footer container">
 
@@ -108,7 +150,6 @@
             <div class="footer__subscription-form">
                 <h2 class="footer__subscription-form-title"> subscribe</h2>
                 <h3 class="footer__subscription-form-subtitle"> for our newletter and promotion</h3>
-                <!-- чтобы не выдавало ошибку перевел на страницу регистрации -->
                 <form class="footer__subscription-form-email" action="registration.html">
                     <input class="footer__subscription-form-input" type="email" placeholder="Enter Your Email">
                     <button class="footer__subscription-form-button" type="submit">Subscribe</button>
@@ -122,16 +163,16 @@
             </div>
             <div class="footer__social">
                 <div class="footer__social-box">
-                    <a href="#"><img src="./img/facebook_vector.png" alt="fb_icon"></a>
+                    <a href="#"><img src="./img/facebook-vector.png" alt="fb_icon"></a>
                 </div>
                 <div class="footer__social-box footer__social-box--pink">
-                    <a href="#"><img src="./img/insta_vector_white.png" alt="instagram_icon"></a>
+                    <a href="#"><img src="./img/insta-vector-white.png" alt="instagram_icon"></a>
                 </div>
                 <div class="footer__social-box">
-                    <a href="#"><img src="./img/pin_vector.png" alt="pinterest_icon"></a>
+                    <a href="#"><img src="./img/pin-vector.png" alt="pinterest_icon"></a>
                 </div>
                 <div class="footer__social-box">
-                    <a href="#"><img src="./img/twit_vector.png" alt="twitter_icon"></a>
+                    <a href="#"><img src="./img/twit-vector.png" alt="twitter_icon"></a>
                 </div>
         </section>
     </footer>
